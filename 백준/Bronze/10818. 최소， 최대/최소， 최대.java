@@ -9,8 +9,8 @@ public class Main {
         
         int cnt = Integer.parseInt(br.readLine());
         String[] sArr =  br.readLine().split(" ");
-        int min = 1000000;
-        int max = -1000000;
+        int min = Integer.parseInt(sArr[0]);
+        int max = Integer.parseInt(sArr[0]);
 
         for (int i = 0; i < cnt; i++) {
             int num = Integer.parseInt(sArr[i]);

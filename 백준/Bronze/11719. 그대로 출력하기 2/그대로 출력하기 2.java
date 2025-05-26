@@ -11,6 +11,6 @@ public class Main {
             sb.append(s).append("\n");
 
         }
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 }

@@ -7,10 +7,10 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int cnt = Integer.parseInt(br.readLine());
         int sum = 0;
-        String [] array = br.readLine().split("");
-        
+        char[] array = br.readLine().toCharArray();
+
         for (int i = 0; i < cnt; i++) {
-            sum += Integer.parseInt(array[i]);
+            sum += Integer.parseInt(String.valueOf(array[i]));
         }
 
         System.out.println(sum);

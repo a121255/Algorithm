@@ -9,12 +9,15 @@ public class Main {
         
         int cnt = Integer.parseInt(br.readLine());
         String[] sArr =  br.readLine().split(" ");
-        int[] iArr = new int[cnt];
+        int min = 1000000;
+        int max = -1000000;
 
-        for(int i = 0; i < cnt; i++){
-            iArr[i] = Integer.parseInt(sArr[i]);
+        for (int i = 0; i < cnt; i++) {
+            int num = Integer.parseInt(sArr[i]);
+            min = Math.min(min, num);
+            max = Math.max(max, num);
         }
 
-        System.out.println(Arrays.stream(iArr).min().getAsInt() + " " + Arrays.stream(iArr).max().getAsInt());
+        System.out.println(min + " " + max);
     }
 }

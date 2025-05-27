@@ -9,15 +9,13 @@ public class Main {
 
         int cnt = Integer.parseInt(br.readLine());
 
-        int s = 1;
         for (int i = 1; i <= cnt; i++) {
             for (int j = 1; j <= cnt - i; j++){
                 sb.append(" ");
             }
-            for (int j = 0; j < s; j++) {
+            for (int j = 0; j < (2 * i - 1); j++) {
                 sb.append("*");
             }
-            s += 2;
             sb.append("\n");
         }
         System.out.println(sb);

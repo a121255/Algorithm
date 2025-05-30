@@ -9,12 +9,6 @@ public class Main {
         String[] arr = br.readLine().split(" ");
         int a = Integer.parseInt(arr[0]);
         int b = Integer.parseInt(arr[1]);
-
-        if(a < b) {
-            int temp = a;
-            a = b;
-            b = temp;
-        }
         
         System.out.println(gcd(a, b));
         System.out.println(lmc(a, b));

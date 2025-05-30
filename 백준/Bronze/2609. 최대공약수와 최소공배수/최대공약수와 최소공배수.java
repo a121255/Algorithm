@@ -4,7 +4,6 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new java.io.InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
 
         String[] arr = br.readLine().split(" ");
         int a = Integer.parseInt(arr[0]);

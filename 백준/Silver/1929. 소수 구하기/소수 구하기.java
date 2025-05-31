@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -13,20 +12,19 @@ public class Main {
         int n = Integer.parseInt(num[0]);
         int m = Integer.parseInt(num[1]);
 
-        boolean[] isPrime = new boolean[m+1]; 
-        Arrays.fill(isPrime, true);
+        boolean[] isNotPrime = new boolean[m+1];
 
-        isPrime[0] = isPrime[1] = false;
+        isNotPrime[0] = isNotPrime[1] = true;
         for(int i=2; i*i <= m; i++) {
-            if(isPrime[i]) {
+            if(!isNotPrime[i]) {
                 for(int j = i*i; j <= m; j += i) {
-                    isPrime[j] = false;
+                    isNotPrime[j] = true;
                 }
             }
         }
 
         for(int i = n; i <= m; i++) {
-            if(isPrime[i]) {
+            if(!isNotPrime[i]) {
                 sb.append(i).append("\n");
             }
         }
